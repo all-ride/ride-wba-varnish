@@ -1,0 +1,32 @@
+{
+    "routes": [
+        {
+            "path": "/admin/varnish",
+            "controller": "ride\\web\\base\\controller\\VarnishController",
+            "action": "indexAction",
+            "methods": ["GET", "POST"],
+            "id": "varnish"
+        },
+        {
+            "path": "/admin/varnish/add",
+            "controller": "ride\\web\\base\\controller\\VarnishController",
+            "action": "formAction",
+            "methods": ["GET", "POST"],
+            "id": "varnish.server.add"
+        },
+        {
+            "path": "/admin/varnish/%server%",
+            "controller": "ride\\web\\base\\controller\\VarnishController",
+            "action": "formAction",
+            "methods": ["GET", "POST"],
+            "id": "varnish.server.edit"
+        },
+        {
+            "path": "/admin/varnish/%server%/delete",
+            "controller": "ride\\web\\base\\controller\\VarnishController",
+            "action": "deleteAction",
+            "methods": ["POST"],
+            "id": "varnish.server.delete"
+        }
+    ]
+}
