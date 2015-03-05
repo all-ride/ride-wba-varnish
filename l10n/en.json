@@ -1,0 +1,18 @@
+{
+    "button.ban": "Ban",
+    "error.varnish": "%error%",
+    "label.connect.unable": "No Connection",
+    "label.force": "Force",
+    "label.force.varnish": "Ignore failures and continue to the remaining servers",
+    "label.port": "Port",
+    "label.running": "Running",
+    "label.running.not": "Not Running",
+    "label.secret": "Secret",
+    "label.server": "Server",
+    "label.status": "Status",
+    "label.url.or.expression": "URL or an expression",
+    "success.varnish.ban": "The ban command has been executed",
+    "title.servers": "Servers",
+    "title.server.add": "Add A New Server",
+    "title.varnish": "Varnish"
+}
