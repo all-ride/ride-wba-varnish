@@ -37,7 +37,7 @@ class VarnishController extends AbstractController {
 
         $form = $this->createFormBuilder();
         $form->setId('form-varnish');
-        $form->addRow('url', 'website', array(
+        $form->addRow('url', 'string', array(
             'label' => $translator->translate('label.url.or.expression'),
             'attributes' => array(
                 'placeholder' => $translator->translate('label.url.or.expression'),
@@ -67,6 +67,11 @@ class VarnishController extends AbstractController {
                     $recursive = true;
                 } else {
                     $recursive = false;
+                }
+
+                if (strpos($data['url'], ' ') === false && strpos($data['url'], 'http') !== 0) {
+                    // normalize to url when not an expression
+                    $data['url'] = 'http://' . $data['url'];
                 }
 
                 if (filter_var($data['url'], FILTER_VALIDATE_URL, FILTER_FLAG_SCHEME_REQUIRED) !== false) {

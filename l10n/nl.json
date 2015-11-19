@@ -1,0 +1,18 @@
+{
+    "button.ban": "Ban",
+    "error.varnish": "%error%",
+    "label.connect.unable": "Geen verbinding",
+    "label.force": "Forceren",
+    "label.force.varnish": "Ignore failures and continue to the remaining servers",
+    "label.port": "Poort",
+    "label.running": "Ingeschakeld",
+    "label.running.not": "Uitgeschakeld",
+    "label.secret": "Geheime sleutel",
+    "label.server": "Server",
+    "label.status": "Status",
+    "label.url.or.expression": "URL of een expressie",
+    "success.varnish.ban": "Het ban commando werd uitgevoerd",
+    "title.servers": "Servers",
+    "title.server.add": "Voeg een nieuwe server toe",
+    "title.varnish": "Varnish"
+}
