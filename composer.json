@@ -2,7 +2,7 @@
     "name": "ride/wba-varnish",
     "description": "Varnish integration of a Ride web application",
     "license": "MIT",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "authors": [
         {
             "name": "Joris Vandeweerd",
