@@ -1,7 +1,7 @@
 {
     "button.ban": "Ban",
     "error.varnish": "%error%",
-    "label.connect.unable": "No Connection",
+    "label.connect.unable": "No connection",
     "label.force": "Force",
     "label.force.varnish": "Ignore failures and continue to the remaining servers",
     "label.port": "Port",
