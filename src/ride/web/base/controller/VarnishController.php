@@ -125,6 +125,7 @@ class VarnishController extends AbstractController {
             $data = null;
         }
 
+        $referer = $this->getReferer();
         $translator = $this->getTranslator();
 
         $form = $this->createFormBuilder($data);
@@ -162,7 +163,11 @@ class VarnishController extends AbstractController {
                 }
                 $this->varnishPool->addServer($data);
 
-                $this->response->setRedirect($this->getUrl('varnish'));
+                if (!$referer) {
+                    $referer = $this->getUrl('varnish');
+                }
+
+                $this->response->setRedirect($referer);
 
                 return;
             } catch (ValidationException $exception) {
@@ -173,6 +178,7 @@ class VarnishController extends AbstractController {
         $this->setTemplateView('varnish/server', array(
             'form' => $form->getView(),
             'server' => $server,
+            'referer' => $referer,
         ));
     }
 
