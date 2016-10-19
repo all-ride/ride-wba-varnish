@@ -120,6 +120,7 @@ class VarnishController extends AbstractController {
                 'host' => $server->getHost(),
                 'port' => $server->getPort(),
                 'secret' => $server->getSecret(),
+                'addNewLineToSecret' => substr($server->getSecret(), -1) === "\n",
             );
         } else {
             $data = null;
@@ -145,6 +146,10 @@ class VarnishController extends AbstractController {
         $form->addRow('secret', 'string', array(
             'label' => $translator->translate('label.secret'),
         ));
+        $form->addRow('addNewLineToSecret', 'option', array(
+            'label' => '',
+            'description' => $translator->translate('label.secret.new.line'),
+        ));
         $form->build();
 
         if ($form->isSubmitted()) {
@@ -154,6 +159,8 @@ class VarnishController extends AbstractController {
                 $data = $form->getData();
                 if ($data['secret'] === '') {
                     $data['secret'] = null;
+                } elseif ($data['addNewLineToSecret']) {
+                    $data['secret'] .= "\n";
                 }
 
                 $data = new VarnishAdmin($data['host'], $data['port'], $data['secret']);

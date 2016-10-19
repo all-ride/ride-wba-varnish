@@ -8,6 +8,7 @@
     "label.running": "Running",
     "label.running.not": "Not Running",
     "label.secret": "Secret",
+    "label.secret.new.line": "Add a new line character to the secret",
     "label.server": "Server",
     "label.status": "Status",
     "label.url.or.expression": "URL or an expression",

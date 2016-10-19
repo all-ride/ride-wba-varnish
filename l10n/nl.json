@@ -8,6 +8,7 @@
     "label.running": "Ingeschakeld",
     "label.running.not": "Uitgeschakeld",
     "label.secret": "Geheime sleutel",
+    "label.secret.new.line": "Voeg een lege lijn toe aan de geheime sleutel",
     "label.server": "Server",
     "label.status": "Status",
     "label.url.or.expression": "URL of een expressie",
