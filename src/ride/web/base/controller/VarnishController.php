@@ -74,7 +74,7 @@ class VarnishController extends AbstractController {
                     $data['url'] = 'http://' . $data['url'];
                 }
 
-                if (filter_var($data['url'], FILTER_VALIDATE_URL, FILTER_FLAG_SCHEME_REQUIRED) !== false) {
+                if (filter_var($data['url'], FILTER_VALIDATE_URL) !== false) {
                     $this->varnishPool->banUrl($data['url'], $recursive);
                 } else {
                     $this->varnishPool->ban($data['url']);
